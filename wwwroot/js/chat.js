@@ -21,5 +21,11 @@ document.getElementById("sendButton").addEventListener("click", function (event)
         return console.error(err.toString());
     });
     event.preventDefault();
+/* document.getElementById("sendButton").addEventListener("click", function (event) {
+    var message = document.getElementById("messageInput").value;
+    connection.invoke("SendMessage", "", message).catch(function (err) {
+        return console.error(err.toString());
+    });
+    event.preventDefault(); */
 
 });

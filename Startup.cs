@@ -49,6 +49,7 @@ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -58,6 +59,7 @@ options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapRazorPages();
             });
         }
     }
